@@ -189,19 +189,19 @@ void D_forward_4_2(double *S, double *G, double *W, double *SX)
 void For_write(double v[], double n[], double P[], double T[], double q[], double X[], long j)
 {
     // Non-uniform grid/
-    sprintf(fname, "init%d/Density%d.dat", nfile * 1000, nfile + file_read + j);
+    sprintf(fname, "init/Density%d.dat", nfile + file_read + j);
     fout_n = fopen(fname, "w");
-    sprintf(fname, "init%d/Velocity%d.dat", nfile * 1000, nfile + file_read + j);
+    sprintf(fname, "init/Velocity%d.dat", nfile + file_read + j);
     fout_v = fopen(fname, "w");
-    sprintf(fname, "init%d/Heating%d.dat", nfile * 1000, nfile + file_read + j);
+    sprintf(fname, "init/Heating%d.dat", nfile + file_read + j);
     fout_q = fopen(fname, "w");
-    sprintf(fname, "init%d/Pressure%d.dat", nfile * 1000, nfile + file_read + j);
+    sprintf(fname, "init/Pressure%d.dat", nfile + file_read + j);
     fout_P = fopen(fname, "w");
-    sprintf(fname, "init%d/Temperature%d.dat", nfile * 1000, nfile + file_read + j);
+    sprintf(fname, "init/Temperature%d.dat", nfile + file_read + j);
     fout_T = fopen(fname, "w");
-    sprintf(fname, "init%d/X%d.dat", nfile * 1000, nfile + file_read + j);
+    sprintf(fname, "init/X%d.dat", nfile + file_read + j);
     fout_X = fopen(fname, "w");
-    sprintf(fname, "init%d/r%d.dat", nfile * 1000, nfile + file_read + j);
+    sprintf(fname, "init/r%d.dat", nfile + file_read + j);
     fout_r = fopen(fname, "w");
     for (i = 0; i <= M; i++)
         fprintf(fout_n, "%.10e\n", n[i]);
